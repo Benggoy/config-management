@@ -1,0 +1,29 @@
+{
+  "mcpServers": {
+    "filesystem-limited": {
+      "command": "npx",
+      "args": [
+        "-y", 
+        "@modelcontextprotocol/server-filesystem", 
+        "/Users/benitomartinlopez/Documents/Claude-Access"
+      ]
+    },
+    "github-public": {
+      "command": "npx",
+      "args": [
+        "-y", 
+        "@modelcontextprotocol/server-github"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "REPLACE_WITH_YOUR_GITHUB_TOKEN"
+      }
+    }
+  },
+  "_security_level": "moderate",
+  "_restrictions": {
+    "filesystem": "write access limited to Claude-Access directory only",
+    "github": "access limited to public repositories (token-dependent)",
+    "created": "2025-05-24T20:10:00Z",
+    "installation_method": "on-demand_npx"
+  }
+}
